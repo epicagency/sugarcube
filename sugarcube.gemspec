@@ -20,9 +20,9 @@ Gem::Specification.new do |gem|
 
   gem.homepage    = 'https://github.com/fusionbox/sugarcube'
 
-  gem.files       = [ ] # Put all your files in here (TODO)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  gem.files       = Dir['lib/**/*.rb']
+  gem.executables = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.test_files  = gem.files.grep(%r{^(test|spec|features)/})
 
   gem.name          = 'sugarcube'
   gem.require_paths = ['lib']
